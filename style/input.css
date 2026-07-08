@@ -22,7 +22,8 @@
     --color-primary-400: hsl(262 85% 65%);
     --color-primary-500: hsl(262 83% 58%);
     --color-primary-600: hsl(262 80% 50%);
-    --color-primary-700: hsl(262 78% 42%); /*hover*/
+    --color-primary-700: hsl(262 78% 42%);
+    /*hover*/
     --color-primary-800: hsl(262 75% 34%);
     --color-primary-900: hsl(262 70% 26%);
     --color-default-950: hsl(222 47% 8%);
@@ -31,11 +32,17 @@
 }
 
 @layer base {
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
     body {
         @apply font-jost;
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
     }
 }
 
@@ -43,28 +50,36 @@
 
 
 @layer components {
-    .btn{
-        @apply me-2 mt-2 inline-flex items-center justify-center gap-2 px-6 py-2  text-white transition-all duration-300 rounded-full 
+    .btn {
+        @apply me-2 mt-2 inline-flex items-center justify-center gap-2 px-6 py-2 text-white transition-all duration-300 rounded-full
     }
-    .btn-brimary{
+
+    .btn-primary {
         @apply bg-primary-500 hover:bg-primary-700
     }
-    .btn-transparent{
+
+    .btn-transparent {
         @apply bg-transparent border border-white/20 hover:border-primary-700 hover:bg-primary-500
+    }
+
+    .card-overlay{
+        @apply absolute inset-x-0 top-1/2 -translate-y-1/2 scale-0 opacity-0 text-center transition-all duration-500 ease-in-out group-hover:scale-100 group-hover:opacity-100
     }
 }
 
 @layer utilities {
-    .layaut{
+    .page-container {
         @apply w-full mx-auto px-1 sm:px-8 md:px-0 lg:px-16 xl:px-20
-        
     }
-    .bggg{
+
+    .bggg {
         @apply bg-blue-700
     }
+
     .li-style {
         @apply *:gap-2 *:relative *:text-base *:text-white *:mx-3.5 *:cursor-pointer *:py-1 *:leading-6 *:font-semibold *:capitalize *:-tracking-tight *:bg-transparent *:transition-all *:duration-300 *:ease-in-out
     }
+
     .li-style>*::after {
         content: "";
         @apply absolute -bottom-1 left-0 h-0.5 w-0 rounded-full bg-primary-500 transition-all duration-500 ease-in-out;
@@ -73,18 +88,23 @@
     .is-active {
         @apply text-primary-500;
     }
+
     .is-active::after {
         @apply w-3/4;
     }
-    .bg-g{
+
+    .bg-gradient-blur {
         @apply h-[500px] w-[500px] rounded-full bg-gradient-to-tl from-red-600/20 to-pink-600/30 blur-[200px]
     }
-    .navbar-sticky{
+
+    .navbar-sticky {
         @apply bg-default-950/60 shadow-xl backdrop-blur-2xl transition-all duration-500 ease-in-out
     }
 
-    
+
 }
 
 
 /* npx @tailwindcss/cli -i ./src/style/input.css -o ./src/style/output.css --watch */
+
+/* https://themes.coderthemes.com/webai-next/pages/index-1#categories */
