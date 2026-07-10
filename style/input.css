@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@source "../node_modules/preline/dist/*.js";
+@import "../node_modules/preline/variants.css";
+
 @theme {
     /* --color-default-900: rgb(15 23 42); */
     --color-default-50: hsl(222 45% 97%);
