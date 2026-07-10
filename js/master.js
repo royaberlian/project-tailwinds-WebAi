@@ -2,10 +2,11 @@
 const items = document.querySelectorAll(".menu>li")
 items.forEach(val => {
     val.addEventListener("click", () => {
+
         items.forEach(i => {
             i.classList.remove("is-active")
-            val.classList.add("is-active")
         })
+        val.classList.add("is-active")
     })
 })
 // nav scroll
