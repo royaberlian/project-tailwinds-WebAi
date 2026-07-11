@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
-@source "../node_modules/preline/dist/*.js";
-@import "../node_modules/preline/variants.css";
-
+@source "../../node_modules/preline/dist/*.js";
+@import "../../node_modules/preline/variants.css";
 @theme {
     /* --color-default-900: rgb(15 23 42); */
     --color-default-50: hsl(222 45% 97%);
@@ -71,14 +70,11 @@
 }
 
 @layer utilities {
+
+    @layer components {
     .page-container {
-        @apply w-full mx-auto px-1 sm:px-8 md:px-0 lg:px-16 xl:px-20
+        @apply w-full mx-auto px-4 sm:max-w-[640px] sm:px-8 md:max-w-[768px] lg:max-w-[1024px] lg:px-16 xl:max-w-[1280px] xl:px-20 2xl:max-w-[1536px] 2xl:px-40;}
     }
-
-    .bggg {
-        @apply bg-blue-700
-    }
-
     .li-style {
         @apply *:gap-2 *:relative *:text-base *:text-white *:mx-3.5 *:cursor-pointer *:py-1 *:leading-6 *:font-semibold *:capitalize *:-tracking-tight *:bg-transparent *:transition-all *:duration-300 *:ease-in-out
     }
@@ -110,4 +106,3 @@
 
 /* npx @tailwindcss/cli -i ./src/style/input.css -o ./src/style/output.css --watch */
 
-/* https://themes.coderthemes.com/webai-next/pages/index-1#categories */

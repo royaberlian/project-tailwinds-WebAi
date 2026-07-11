@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="style/output.css">
 </head>
 
-<body class="bg-default-900">
+<body class="bg-default-900" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
     <div id="root">
         <div>
             <!-- background gradient -->
@@ -22,7 +23,7 @@
         <!-- ***header*** -->
         <header id="navbar" class="fixed navbar-sticky right-0 left-0 bg-transparent top-0 z-40 w-full overflow-hidden">
             <div class="w-full mx-auto px-4 sm:px-8 lg:px-16 xl:px-20">
-                <nav class="flex lg:flex-nowrap items-center justify-between py-4 border-2 border-emerald-400">
+                <nav class="flex lg:flex-nowrap items-center justify-between py-4">
                     <img class="h-10" src="image/imgi_34_logo.png" loading="lazy" alt="">
                     <!-- hamburger menu -->
                     <div class="ms-auto flex items-center px-2.5 lg:hidden">
@@ -67,15 +68,15 @@
             </div>
         </header>
         <!-- *** Section Home **** -->
-        <section id="home" class="relative overflow-hidden pt-[74px] border border-amber-500">
+        <section id="home" class="relative overflow-hidden pt-[74px]">
             <div class="w-full relative overflow-hidden md:px-3 lg:px-10">
                 <div class="bg-default-950/40 py-[74px] md:rounded-lg lg:py-24 backdrop-blur-3xl shadow">
                     <div class="page-container relative">
-                        <div class="absolute top-0 border border-red-600">
+                        <div class="absolute top-0">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="badge" class="lucide lucide-badge h-12 w-12 animate-[spin_10s_linear_infinite] fill-primary-500/20 text-transparent"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path></svg>
                         </div>
-                        <div class="grid grid-cols-1 md:grid-cols-12 items-center gap-[30px] *:border *:border-red-400">
-                            <div class="md:col-span-7">
+                        <div class="grid grid-cols-1 md:grid-cols-12 items-center gap-[30px]">
+                            <div class="md:col-span-7" data-aos="fade-right">
                                 <div class="me-6">
                                     <span class="mb-6 inline-flex items-center gap-1.5 bg-primary-500/20 px-3 py-1.5 text-sm font-medium text-primary-500 rounded-full">
                                         <span class="inline-block w-2 h-2 rounded-full bg-primary-500"></span>
@@ -98,7 +99,7 @@
 
                             </div>
                             <div class="md:col-span-5">
-                                <div class="flex gap-4 md:gap-6">
+                                <div class="flex gap-4 md:gap-6" data-aos="fade-left">
                                     <div class="flex w-full flex-col gap-4 md:gap-6 pt-10 md:pt-16">
                                         <img class="h-40 w-full rounded-lg object-cover md:h-[278px]" src="image/imgi_2_22-Ds6AUxyl.png" loading="lazy" alt="">
                                         <img class="h-40 w-full rounded-lg object-cover md:h-[278px]" src="image/imgi_3_18-Dnar7FWu.png" loading="lazy" alt="">
@@ -119,7 +120,7 @@
 
         </section>
         <!-- *** Section Categories **** -->
-        <section id="categories" class="py-24 border-2 border-amber-300">
+        <section id="categories" class="py-24">
             <div class="page-container relative">
                 <div class="mb-10 flex flex-wrap items-center justify-between">
                     <div>
@@ -135,13 +136,22 @@
                 <!--NFT Cards -->
                 <div class="mt-8 grid grid-cols-1 gap-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                     <!-- card1 -->
-                    <div class="group relative rounded-lg bg-default-950/40 backdrop-blur-3xl duration-500 ease-in-out">
+                    <div class="group relative rounded-lg bg-default-950/40 backdrop-blur-3xl duration-500 ease-in-out" data-aos="zoom-in">
                         <div class="p-3">
                             <!-- Card Image -->
                             <div class="relative">
                                 <img src="image/card1.png" class="rounded-md" alt="">
                                 <div class="card-overlay">
                                     <button class="btn btn-primary tracking-wide font-semibold text-base">Place Bid<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide h-4 w-4 fill-white" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 11l19-9l-9 19l-2-8z"></path></svg></button>
+                                </div>
+                                <div class="absolute top-0 left-0 p-2 transition-all duration-700">
+                                    <div class="inline-flex justify-center">
+                                        <div class="rounded-full bg-gradient-to-r from-rose-500 to-blue-600 px-3 py-1">
+                                            <p class="countdown text-sm font-bold text-white">
+                                                03 : 23 : 38 : 40
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Card Content -->
@@ -174,7 +184,7 @@
                     </div> 
 
                     <!-- card2 -->
-                    <div class="group relative rounded-lg bg-default-950/40 backdrop-blur-3xl duration-500 ease-in-out">
+                    <div class="group relative rounded-lg bg-default-950/40 backdrop-blur-3xl duration-500 ease-in-out" data-aos="zoom-in">
                         <div class="p-3">
                             <div class="relative">
                                 <img src="image/card2.png" class="rounded-md" alt="">
@@ -212,7 +222,7 @@
                     </div>
 
                     <!-- card3 -->
-                    <div class="group relative rounded-lg bg-default-950/40 backdrop-blur-3xl duration-500 ease-in-out">
+                    <div class="group relative rounded-lg bg-default-950/40 backdrop-blur-3xl duration-500 ease-in-out" data-aos="zoom-in">
                         <div class="p-3">
                             <div class="relative">
                                 <img src="image/card3.png" class="rounded-md" alt="">
@@ -250,13 +260,22 @@
                     </div> 
 
                     <!-- card4 -->
-                    <div class="group relative rounded-lg bg-default-950/40 backdrop-blur-3xl duration-500 ease-in-out">
+                    <div class="group relative rounded-lg bg-default-950/40 backdrop-blur-3xl duration-500 ease-in-out"data-aos="zoom-in">
                         <div class="p-3">
                             <!-- Card Image -->
                             <div class="relative">
                                 <img src="image/card4.png" class="rounded-md" alt="">
                                 <div class="card-overlay">
                                     <button class="btn btn-primary tracking-wide font-semibold text-base">Place Bid<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide h-4 w-4 fill-white" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 11l19-9l-9 19l-2-8z"></path></svg></button>
+                                </div>
+                                <div class="absolute top-0 left-0 p-2 transition-all duration-700">
+                                    <div class="inline-flex justify-center">
+                                        <div class="rounded-full bg-gradient-to-r from-rose-500 to-blue-600 px-3 py-1">
+                                            <p class="countdown text-sm font-bold text-white">
+                                                03 : 23 : 38 : 40
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Card Content -->
@@ -289,7 +308,7 @@
                     </div> 
 
                     <!-- card5 -->
-                    <div class="group relative rounded-lg bg-default-950/40 backdrop-blur-3xl duration-500 ease-in-out">
+                    <div class="group relative rounded-lg bg-default-950/40 backdrop-blur-3xl duration-500 ease-in-out"data-aos="zoom-in">
                         <div class="p-3">
                             <!-- Card Image -->
                             <div class="relative">
@@ -328,7 +347,7 @@
                     </div> 
 
                     <!-- card6 -->
-                    <div class="group relative rounded-lg bg-default-950/40 backdrop-blur-3xl duration-500 ease-in-out">
+                    <div class="group relative rounded-lg bg-default-950/40 backdrop-blur-3xl duration-500 ease-in-out"data-aos="zoom-in">
                         <div class="p-3">
                             <!-- Card Image -->
                             <div class="relative">
@@ -367,13 +386,22 @@
                     </div> 
 
                     <!-- card7 -->
-                    <div class="group relative rounded-lg bg-default-950/40 backdrop-blur-3xl duration-500 ease-in-out">
+                    <div class="group relative rounded-lg bg-default-950/40 backdrop-blur-3xl duration-500 ease-in-out"data-aos="zoom-in">
                         <div class="p-3">
                             <!-- Card Image -->
                             <div class="relative">
                                 <img src="image/card7.png" class="rounded-md" alt="">
                                 <div class="card-overlay">
                                     <button class="btn btn-primary tracking-wide font-semibold text-base">Place Bid<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide h-4 w-4 fill-white" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 11l19-9l-9 19l-2-8z"></path></svg></button>
+                                </div>
+                                <div class="absolute top-0 left-0 p-2 transition-all duration-700">
+                                    <div class="inline-flex justify-center">
+                                        <div class="rounded-full bg-gradient-to-r from-rose-500 to-blue-600 px-3 py-1">
+                                            <p class="countdown text-sm font-bold text-white">
+                                                03 : 23 : 38 : 40
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Card Content -->
@@ -406,7 +434,7 @@
                     </div> 
 
                     <!-- card8 -->
-                    <div class="group relative rounded-lg bg-default-950/40 backdrop-blur-3xl duration-500 ease-in-out">
+                    <div class="group relative rounded-lg bg-default-950/40 backdrop-blur-3xl duration-500 ease-in-out"data-aos="zoom-in">
                         <div class="p-3">
                             <!-- Card Image -->
                             <div class="relative">
@@ -444,15 +472,13 @@
                         </div>
                     </div> 
 
-
-
                 </div> 
             </div>
         </section>
 
 
         <!-- *** Section Top Sellers **** -->
-        <section id="" class="py-24 border-2 border-amber-300">
+        <section id="Sellers" class="py-24">
             <div class="page-container relative">
                 <div class="mb-10 flex flex-wrap items-center justify-between">
                     <div>
@@ -468,8 +494,8 @@
 
                 <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
 
-                    <div class="rounded-xl bg-default-950/40 backdrop-blur-3xl">
-                        <div class="flex items-center border-dashed border-white/20 p-4">
+                    <div class="rounded-xl bg-default-950/40 backdrop-blur-3xl"data-aos="zoom-in-up">
+                        <div class="flex items-center border-b border-dashed border-white/20 p-4">
                             <div class="w-1/3 p-1">
                                 <img class="rounded-md" src="image/card1.png" alt="">
                             </div>
@@ -498,8 +524,8 @@
                     </div>
                
 
-                    <div class="rounded-xl bg-default-950/40 backdrop-blur-3xl">
-                        <div class="flex items-center border-dashed border-white/20 p-4">
+                    <div class="rounded-xl bg-default-950/40 backdrop-blur-3xl" data-aos="zoom-in-up">
+                        <div class="flex items-center border-b border-dashed border-white/20 p-4">
                             <div class="w-1/3 p-1">
                                 <img class="rounded-md" src="image/card4.png" alt="">
                             </div>
@@ -528,8 +554,8 @@
                     </div>
 
 
-                    <div class="rounded-xl bg-default-950/40 backdrop-blur-3xl">
-                        <div class="flex items-center border-dashed border-white/20 p-4">
+                    <div class="rounded-xl bg-default-950/40 backdrop-blur-3xl"data-aos="zoom-in-up">
+                        <div class="flex items-center border-b border-dashed border-white/20 p-4">
                             <div class="w-1/3 p-1">
                                 <img class="rounded-md" src="image/img-10.png" alt="">
                             </div>
@@ -557,8 +583,8 @@
                         </div>
                     </div>
 
-                    <div class="rounded-xl bg-default-950/40 backdrop-blur-3xl">
-                        <div class="flex items-center border-dashed border-white/20 p-4">
+                    <div class="rounded-xl bg-default-950/40 backdrop-blur-3xl"data-aos="zoom-in-up">
+                        <div class="flex items-center border-b border-dashed border-white/20 p-4">
                             <div class="w-1/3 p-1">
                                 <img class="rounded-md" src="image/img-13.png" alt="">
                             </div>
@@ -586,8 +612,8 @@
                         </div>
                     </div>
 
-                    <div class="rounded-xl bg-default-950/40 backdrop-blur-3xl">
-                        <div class="flex items-center border-dashed border-white/20 p-4">
+                    <div class="rounded-xl bg-default-950/40 backdrop-blur-3xl"data-aos="zoom-in-up">
+                        <div class="flex items-center border-b border-dashed border-white/20 p-4">
                             <div class="w-1/3 p-1">
                                 <img class="rounded-md" src="image/img-16.png" alt="">
                             </div>
@@ -615,8 +641,8 @@
                         </div>
                     </div>
 
-                    <div class="rounded-xl bg-default-950/40 backdrop-blur-3xl">
-                        <div class="flex items-center border-dashed border-white/20 p-4">
+                    <div class="rounded-xl bg-default-950/40 backdrop-blur-3xl"data-aos="zoom-in-up">
+                        <div class="flex items-center border-b border-dashed border-white/20 p-4">
                             <div class="w-1/3 p-1">
                                 <img class="rounded-md" src="image/img-20.png" alt="">
                             </div>
@@ -648,7 +674,7 @@
         </section>
 
         <!-- *** Section The Best showcase **** -->
-        <section id="" class="py-24 border-2 border-amber-300">
+        <section id="showcase" class="py-24">
             <div class="page-container relative">
                 <div class="mb-10 flex flex-wrap items-center justify-between">
                     <div>
@@ -661,7 +687,7 @@
                 </div>
 
 
-                <div class="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-0 overflow-hidden rounded-md">
+                <div class="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-0 overflow-hidden rounded-md" data-aos="zoom-out">
                     <a class="overflow-hidden" href="image/img-10.png">
                         <img class="w-full rounded-lg object-cover transition-all duration-1000 hover:scale-110 md:rounded-none" src="image/img-10.png" alt="">
                     </a>
@@ -697,9 +723,9 @@
             </div>
         </section>
         <!-- ########## -->
-        <section class="pb-24 border-2 border-amber-300">
+        <section class="pb-24">
             <div class="page-container">
-                <div class="grid grid-cols-1 gap-px overflow-hidden rounded-xl md:grid-cols-2">
+                <div class="grid grid-cols-1 gap-px overflow-hidden rounded-xl md:grid-cols-2" data-aos="zoom-out">
                     <div class="group relative overflow-hidden bg-slate-950/40 backdrop-blur-3xl transition-all duration-500 hover:bg-primary-500/40 ">
                         <div class="p-6">
                             <div class="relative h-24 w-24 overflow-hidden text-transparent">
@@ -739,8 +765,8 @@
                 </div>
             </div>
         </section>
-        <!-- ########## -->
-        <section class="pb-24 border-2 border-amber-300">
+        <!-- section Browse  -->
+        <section class="pb-24">
             <div class="page-container">
                 <div class="mb-10 flex flex-wrap items-center justify-between">
                     <div>
@@ -752,7 +778,7 @@
                     </a>
                 </div>
 
-                <div class="grid grid-cols-2 gap-6 md:grid-cols-3">
+                <div class="grid grid-cols-2 gap-6 md:grid-cols-3" data-aos="zoom-out-up">
                     <div class="relative rounded-xl overflow-hidden">
                         <div class="absolute bg-black/60 inset-0"></div>
                         <div class="absolute top-0 start-0 p-4">
@@ -780,8 +806,7 @@
             </div>
         </section>
         <!-- section Faqs -->
-
-        <section class="pb-24 border-2 border-amber-300">
+        <section class="pb-24">
             <div class="page-container">
                 <div class="mb-10 flex flex-wrap items-center justify-between">
                     <div>
@@ -789,14 +814,68 @@
                         <p class="text-sm font-medium text-default-200">Start working with Tailwindcss It allows you to compose complex designs  <br> by combining and customizing utility classes...</p>
                     </div>
                 </div>
-
+                <!-- 1 -->
                 <div class="grid gap-6 lg:grid-cols-2">
-                    <div class="hs-accordion-group space-y-4">
+                    <div class="hs-accordion-group space-y-4" data-aos="fade-right">
                         <div class="hs-accordion overflow-hidden rounded-lg border border-white/10 bg-default-950/40 backdrop-blur-3xl">
                             <button class="hs-accordion-toggle active inline-flex items-center justify-between w-full gap-x-3 px-6 py-4 text-left capitalize text-white transition-all">
                                 <h5 class="flex text-base font-semibold">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide me-3 h-5 w-5 stroke-white" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3m.08 4h.01"></path></g></svg>
                                     Will you support my language?
+                                </h5>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="hs-accordion-active:-rotate-180 iconify iconify--lucide h-4 w-4 transition-all duration-500" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m18 15l-6-6l-6 6"></path></svg>
+
+                            </button>
+
+                            <div class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300">
+                                <div class="px-6 pb-4 pt-0">
+                                    <p class="text-sm font-medium text-default-300">You can upload any files from your computer or use Youtube links. Keep in mind that our content repurposing works best with longer videos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="hs-accordion overflow-hidden rounded-lg border border-white/10 bg-default-950/40 backdrop-blur-3xl">
+                            <button class="hs-accordion-toggle inline-flex items-center justify-between w-full gap-x-3 px-6 py-4 text-left capitalize text-white transition-all">
+                                <h5 class="flex text-base font-semibold">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide me-3 h-5 w-5 stroke-white" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3m.08 4h.01"></path></g></svg>
+                                    Do you also provide subtitles?
+                                </h5>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide h-4 w-4 transition-all duration-500 hs-accordion-active:-rotate-180" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m18 15l-6-6l-6 6"></path></svg>
+
+                            </button>
+
+                            <div class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300">
+                                <div class="px-6 pb-4 pt-0">
+                                    <p class="text-sm font-medium text-default-300">You can upload any files from your computer or use Youtube links. Keep in mind that our content repurposing works best with longer videos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="hs-accordion overflow-hidden rounded-lg border border-white/10 bg-default-950/40 backdrop-blur-3xl">
+                            <button class="hs-accordion-toggle inline-flex items-center justify-between w-full gap-x-3 px-6 py-4 text-left capitalize text-white transition-all">
+                                <h5 class="flex text-base font-semibold">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide me-3 h-5 w-5 stroke-white" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3m.08 4h.01"></path></g></svg>
+                                    How do I get started?
+                                </h5>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide h-4 w-4 transition-all duration-500 hs-accordion-active:-rotate-180" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m18 15l-6-6l-6 6"></path></svg>
+
+                            </button>
+
+                            <div class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300">
+                                <div class="px-6 pb-4 pt-0">
+                                    <p class="text-sm font-medium text-default-300">You can upload any files from your computer or use Youtube links. Keep in mind that our content repurposing works best with longer videos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ************** -->
+                     <div class="space-y-4"data-aos="fade-right" >
+                        <div class="hs-accordion overflow-hidden rounded-lg border border-white/10 bg-default-950/40 backdrop-blur-3xl">
+                            <button class="hs-accordion-toggle active inline-flex items-center justify-between w-full gap-x-3 px-6 py-4 text-left capitalize text-white transition-all">
+                                <h5 class="flex text-base font-semibold">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide me-3 h-5 w-5 stroke-white" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3m.08 4h.01"></path></g></svg>
+                                    Do you have any samples?
                                 </h5>
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide h-4 w-4 transition-all duration-500 hs-accordion-active:-rotate-180" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m18 15l-6-6l-6 6"></path></svg>
 
@@ -808,63 +887,9 @@
                                 </div>
                             </div>
                         </div>
-                        <!--  -->
-                        <div class="overflow-hidden rounded-lg border border-white/10 bg-default-950/40 backdrop-blur-3xl">
-                            <button class="inline-flex items-center justify-between w-full gap-x-3 px-6 py-4 text-left capitalize text-white transition-all">
-                                <h5 class="flex text-base font-semibold">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide me-3 h-5 w-5 stroke-white" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3m.08 4h.01"></path></g></svg>
-                                    Do you also provide subtitles?
-                                </h5>
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide h-4 w-4 transition-all duration-500 hs-accordion-active:-rotate-180" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m18 15l-6-6l-6 6"></path></svg>
-
-                            </button>
-
-                            <div class="w-full overflow-hidden transition-[height] duration-300">
-                                <div class="px-6 pb-4 pt-0">
-                                    <p class="text-sm font-medium text-default-300">You can upload any files from your computer or use Youtube links. Keep in mind that our content repurposing works best with longer videos.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--  -->
-                        <div class="overflow-hidden rounded-lg border border-white/10 bg-default-950/40 backdrop-blur-3xl">
-                            <button class="inline-flex items-center justify-between w-full gap-x-3 px-6 py-4 text-left capitalize text-white transition-all">
-                                <h5 class="flex text-base font-semibold">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide me-3 h-5 w-5 stroke-white" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3m.08 4h.01"></path></g></svg>
-                                    How do I get started?
-                                </h5>
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide h-4 w-4 transition-all duration-500 hs-accordion-active:-rotate-180" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m18 15l-6-6l-6 6"></path></svg>
-
-                            </button>
-
-                            <div class="w-full overflow-hidden transition-[height] duration-300">
-                                <div class="px-6 pb-4 pt-0">
-                                    <p class="text-sm font-medium text-default-300">You can upload any files from your computer or use Youtube links. Keep in mind that our content repurposing works best with longer videos.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ************** -->
-                     <div class="space-y-4">
-                        <div class="overflow-hidden rounded-lg border border-white/10 bg-default-950/40 backdrop-blur-3xl">
-                            <button class="inline-flex items-center justify-between w-full gap-x-3 px-6 py-4 text-left capitalize text-white transition-all">
-                                <h5 class="flex text-base font-semibold">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide me-3 h-5 w-5 stroke-white" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3m.08 4h.01"></path></g></svg>
-                                    Do you have any samples?
-                                </h5>
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide h-4 w-4 transition-all duration-500 hs-accordion-active:-rotate-180" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m18 15l-6-6l-6 6"></path></svg>
-
-                            </button>
-
-                            <div class="w-full overflow-hidden transition-[height] duration-300">
-                                <div class="px-6 pb-4 pt-0">
-                                    <p class="text-sm font-medium text-default-300">You can upload any files from your computer or use Youtube links. Keep in mind that our content repurposing works best with longer videos.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--  -->
-                        <div class="overflow-hidden rounded-lg border border-white/10 bg-default-950/40 backdrop-blur-3xl">
-                            <button class="inline-flex items-center justify-between w-full gap-x-3 px-6 py-4 text-left capitalize text-white transition-all">
+                        <!-- 5 -->
+                        <div class="hs-accordion overflow-hidden rounded-lg border border-white/10 bg-default-950/40 backdrop-blur-3xl">
+                            <button class="hs-accordion-toggle inline-flex items-center justify-between w-full gap-x-3 px-6 py-4 text-left capitalize text-white transition-all">
                                 <h5 class="flex text-base font-semibold">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide me-3 h-5 w-5 stroke-white" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3m.08 4h.01"></path></g></svg>
                                     Can I get custom templates?
@@ -873,15 +898,15 @@
 
                             </button>
 
-                            <div class="w-full overflow-hidden transition-[height] duration-300">
+                            <div class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300">
                                 <div class="px-6 pb-4 pt-0">
                                     <p class="text-sm font-medium text-default-300">You can upload any files from your computer or use Youtube links. Keep in mind that our content repurposing works best with longer videos.</p>
                                 </div>
                             </div>
                         </div>
-                        <!--  -->
-                        <div class="overflow-hidden rounded-lg border border-white/10 bg-default-950/40 backdrop-blur-3xl">
-                            <button class="inline-flex items-center justify-between w-full gap-x-3 px-6 py-4 text-left capitalize text-white transition-all">
+                        <!--  6-->
+                        <div class="hs-accordion overflow-hidden rounded-lg border border-white/10 bg-default-950/40 backdrop-blur-3xl">
+                            <button class="hs-accordion-toggle inline-flex items-center justify-between w-full gap-x-3 px-6 py-4 text-left capitalize text-white transition-all">
                                 <h5 class="flex text-base font-semibold">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide me-3 h-5 w-5 stroke-white" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3m.08 4h.01"></path></g></svg>
                                     What types of videos can I upload?
@@ -890,7 +915,7 @@
 
                             </button>
 
-                            <div class="w-full overflow-hidden transition-[height] duration-300">
+                            <div class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300">
                                 <div class="px-6 pb-4 pt-0">
                                     <p class="text-sm font-medium text-default-300">You can upload any files from your computer or use Youtube links. Keep in mind that our content repurposing works best with longer videos.</p>
                                 </div>
@@ -903,11 +928,86 @@
 
 
             </div>
-        </section>    
+        </section>
+        <!-- footer -->
+        <footer class="bg-default-950/40 backdrop-blur-3xl">
+            <div class="page-container lg:px-20">
+                <div class="flex flex-col justify-between gap-14 py-24 lg:flex-row">
+                    <div class="lg:w-3/12">
+                        <a class="flex items-center gap-2" href="">
+                            <img class="w-36" src="image/imgi_34_logo.png" alt="">
+                        </a>
+                        <p class="mt-6 max-w-xs text-sm font-medium text-default-200">Start working with Tailwindcss It allows you to compose complex designs by combining and customizing utility classes.</p>
+                        <h5 class="mb-4 mt-6 text-base font-semibold text-default-200">Follow Us :</h5>
+                        <ul class="flex flex-wrap items-center gap-1">
+                            <li>
+                                <a class="group inline-flex h-8 w-8 items-center justify-center rounded-md border border-white/10 transition-all duration-500 hover:bg-primary-500" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide h-4 w-4 text-default-300 group-hover:text-white" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                            </li>
+                            <li>
+                                <a class="group inline-flex h-8 w-8 items-center justify-center rounded-md border border-white/10 transition-all duration-500 hover:bg-primary-500" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide h-4 w-4 text-default-300 group-hover:text-white" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37m1.5-4.87h.01"></path></g></svg></a></a>   
+                            </li>
+                            <li>
+                                <a class="group inline-flex h-8 w-8 items-center justify-center rounded-md border border-white/10 transition-all duration-500 hover:bg-primary-500" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide h-4 w-4 text-default-300 group-hover:text-white" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6c2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4c-.9-4.2 4-6.6 7-3.8c1.1 0 3-1.2 3-1.2"></path></svg></a></a>
+                            </li>
+                            <li>
+                                <a class="group inline-flex h-8 w-8 items-center justify-center rounded-md border border-white/10 transition-all duration-500 hover:bg-primary-500" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide h-4 w-4 text-default-300 group-hover:text-white" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></g></svg></a></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:w-8/12">
+                        <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-4">
+                            <div class="flex flex-col gap-3">
+                                <h5 class="mb-2 font-semibold text-default-200 lg:text-lg xl:text-xl">Marketplace</h5>
+                                <ul class="space-y-3">
+                                    <li><a class="inline-flex items-center gap-2 text-base font-semibold text-default-100 transition-all hover:text-primary-500" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide inline-block h-4 w-4" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m9 15l6-6"></path></g></svg>All NFTs</a></li>
+                                    <li><a class="inline-flex items-center gap-2 text-base font-semibold text-default-100 transition-all hover:text-primary-500" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide inline-block h-4 w-4" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m9 15l6-6"></path></g></svg>New</a></li>
+                                    <li><a class="inline-flex items-center gap-2 text-base font-semibold text-default-100 transition-all hover:text-primary-500" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide inline-block h-4 w-4" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m9 15l6-6"></path></g></svg>Arts</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="flex flex-col gap-3">
+                                <h5 class="mb-2 font-semibold text-default-200 lg:text-lg xl:text-xl">Status</h5>
+                                <ul class="space-y-3">
+                                    <li><a class="inline-flex items-center gap-2 text-base font-semibold text-default-100 transition-all hover:text-primary-500" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide inline-block h-4 w-4" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m9 15l6-6"></path></g></svg>Rankings</a></li>
+                                    <li><a class="inline-flex items-center gap-2 text-base font-semibold text-default-100 transition-all hover:text-primary-500" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide inline-block h-4 w-4" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m9 15l6-6"></path></g></svg>Activity</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="flex flex-col gap-3">
+                                <h5 class="mb-2 font-semibold text-default-200 lg:text-lg xl:text-xl">Resources</h5>
+                                <ul class="space-y-3">
+                                    <li><a class="inline-flex items-center gap-2 text-base font-semibold text-default-100 transition-all hover:text-primary-500" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide inline-block h-4 w-4" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m9 15l6-6"></path></g></svg>Help Center</a></li>
+                                    <li><a class="inline-flex items-center gap-2 text-base font-semibold text-default-100 transition-all hover:text-primary-500" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide inline-block h-4 w-4" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m9 15l6-6"></path></g></svg>Suggestions</a></li>
+                                    <li><a class="inline-flex items-center gap-2 text-base font-semibold text-default-100 transition-all hover:text-primary-500" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide inline-block h-4 w-4" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m9 15l6-6"></path></g></svg>Newsletter</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="flex flex-col gap-3">
+                                <h5 class="mb-2 font-semibold text-default-200 lg:text-lg xl:text-xl">Company</h5>
+                                <ul class="space-y-3">
+                                    <li><a class="inline-flex items-center gap-2 text-base font-semibold text-default-100 transition-all hover:text-primary-500" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide inline-block h-4 w-4" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m9 15l6-6"></path></g></svg>About</a></li>
+                                    <li><a class="inline-flex items-center gap-2 text-base font-semibold text-default-100 transition-all hover:text-primary-500" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--lucide inline-block h-4 w-4" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m9 15l6-6"></path></g></svg>Careers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 py-6">
+                <div class="page-container flex flex-col items-center justify-between gap-3 text-center md:flex-row">
+                <p class="text-sm text-default-300">© 2026 Roya Berelian. All rights reserved.</p>
+                <p class="text-sm text-default-300">Built with HTML & Tailwind CSS</p>
+                </div>
+            </div>
+
+        </footer>    
     </div>
 
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script src="../node_modules/preline/dist/preline.js"></script>
-</body>
 <script src="js/master.js"></script>
+
+</body>
 
 </html>
